@@ -1,0 +1,14 @@
+1. SELECT titre FROM livre
+2. SELECT nom FROM usager
+3. SELECT DISTINCT nom FROM usager
+4. SELECT titre FROM livre WHERE annee < 1980
+5. SELECT titre FROM livre WHERE titre LIKE '%A%'
+6. SELECT isbn FROM emprunt WHERE retour = '2020-01-01'
+7. SELECT nom FROM auteur ORDER BY nom
+8. SELECT nom FROM usager WHERE cp = '75012' OR cp = '75013'
+9. SELECT nom, adresse FROM usager WHERE adresse NOT LIKE '%Rue%'
+10. SELECT titre FROM livre INNER JOIN emprunt ON livre.isbn = emprunt.isbn
+11. SELECT titre FROM livre INNER JOIN emprunt ON livre.isbn = emprunt.isbn AND emprunt.retour < '2020-03-31'
+12. SELECT DISTINCT nom, prenom FROM usager INNER JOIN emprunt ON usager.code_barre = emprunt.code_barre ORDER BY nom
+13. SELECT titre FROM livre WHERE annee < ( SELECT titre FROM livre WHERE titre = 'Dune')
+14. SELECT COUNT(titre) FROM livre WHERE annee < ( SELECT titre FROM livre WHERE titre = 'Dune') 
